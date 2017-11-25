@@ -9,7 +9,7 @@ defmodule Convert do
     def to_base64(hex) do
       hex
       |> Base.decode16!(case: :mixed)
-      |> Base.encode64
+      |> Base.encode64()
     end
   end
 
@@ -17,8 +17,8 @@ defmodule Convert do
     def to_hex(base64) do
       base64
       |> Base.decode64!(padding: false)
-      |> Base.encode16
-      |> String.downcase
+      |> Base.encode16()
+      |> String.downcase()
     end
   end
 end
