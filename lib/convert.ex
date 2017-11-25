@@ -8,8 +8,7 @@ defmodule Convert do
     """
     def to_base64(hex) do
       hex
-      |> String.upcase
-      |> Base.decode16!
+      |> Base.decode16!(case: :mixed)
       |> Base.encode64
     end
   end
